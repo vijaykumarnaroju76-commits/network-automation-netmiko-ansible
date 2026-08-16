@@ -1,0 +1,40 @@
+network_automation:
+  backup:
+    enabled: true
+    schedule: "daily"  # daily, weekly, monthly
+    retention: 10      # Keep last 10 backups
+    compression: true
+    backup_dir: "./backups"
+    
+  compliance:
+    enabled: true
+    rules_file: "compliance-rules.yaml"
+    report_format: "json"  # json, html, csv
+    generate_html_report: true
+    report_dir: "./reports"
+    
+  logging:
+    level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+    file: "logs/automation.log"
+    max_size_mb: 50
+    backup_count: 10
+    
+  devices:
+    connection_timeout: 30
+    read_timeout: 20
+    write_timeout: 15
+    retry_attempts: 3
+    device_type: "cisco_ios"
+    
+  ansible:
+    inventory_file: "inventory/hosts.ini"
+    log_path: "logs/ansible.log"
+    parallel_jobs: 5
+    forks: 10
+    
+  notifications:
+    enabled: false
+    email_on_error: true
+    email_recipients:
+      - "admin@company.com"
+    slack_webhook: "https://hooks.slack.com/..."

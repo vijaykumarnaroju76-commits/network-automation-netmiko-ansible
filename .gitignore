@@ -1,0 +1,80 @@
+# Python and Ansible Network Automation
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Credentials and Secrets
+*.key
+*.pem
+*.pub
+secrets/
+.vault-pass
+ansible_vault_password
+
+# Backups (committed backups should be in separate git repo)
+backups/*/config_*
+backups/*/running_*
+
+# Reports (optionally ignore)
+reports/compliance_*
+reports/device_facts_*
+
+# Cache
+.cache/
+*.cache
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Ansible
+*.retry
